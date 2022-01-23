@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
-
     public float mouseSensitivity = 100f;
 
     public Transform playerBody;
@@ -14,7 +13,7 @@ public class MouseLook : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = true;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame

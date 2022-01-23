@@ -1,0 +1,24 @@
+[NAME=???]Hello there...
+
+Welcome to this world created by your subconscious.
+
+[NAME=Depression]I am your depression, and I am here to give you a choice.
+
+You have constantly been lazing around and refusing to get things done because of me.
+
+Now you have the opportunity to change that and become an energetic and hard-working person.
+
+If you choose to kill me then I'll disappear from your life...for now, but if you refuse then you will continue to trudge through life with me by your side.
+
+What will your choice be?
+
+**Choices** (Working on this...)
+
+[CHOICE=1]_Kill them
+[CHOICE=2]_Keep them alive
+
+{1}_Hope you enjoy your new self. I'll see you again sometime...
+
+{2}_Then let the cycle continue.
+
+EndQueue
