@@ -2050,6 +2050,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mirror
       objectReference: {fileID: 0}
+    - target: {fileID: 6268887033216401046, guid: b73bc1f1bbe361f4ca6106bbf70432b9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f30591135636dbd4f82970216dc8806f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b73bc1f1bbe361f4ca6106bbf70432b9, type: 3}
 --- !u!1001 &3737206899358170658
@@ -2059,6 +2063,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2566250024809904516, guid: 69e989279119771419d8d0ae2de18234, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fe81c303f4620854ebf642f6da72a585, type: 2}
     - target: {fileID: 3771624649017045758, guid: 69e989279119771419d8d0ae2de18234, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2138,7 +2146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6249083421619865053, guid: aa7ece2f7d91b49459ca981c6447652e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.08
+      value: 2.96
       objectReference: {fileID: 0}
     - target: {fileID: 6249083421619865053, guid: aa7ece2f7d91b49459ca981c6447652e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2176,5 +2184,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Television
       objectReference: {fileID: 0}
+    - target: {fileID: 8862674868058794839, guid: aa7ece2f7d91b49459ca981c6447652e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 467aadb67eb2b994e88203675473bd8e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa7ece2f7d91b49459ca981c6447652e, type: 3}
