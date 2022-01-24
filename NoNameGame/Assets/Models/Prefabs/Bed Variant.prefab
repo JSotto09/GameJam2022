@@ -65,7 +65,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b672a9356ff202141928416b1a1ffefe, type: 3}
       propertyPath: m_Name
-      value: Bed
+      value: Bed Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b672a9356ff202141928416b1a1ffefe, type: 3}
+--- !u!1 &4547597745811417156 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b672a9356ff202141928416b1a1ffefe, type: 3}
+  m_PrefabInstance: {fileID: 3737206899359733013}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &-7409278383757263907
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4547597745811417156}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3369316746193770658, guid: b672a9356ff202141928416b1a1ffefe, type: 3}

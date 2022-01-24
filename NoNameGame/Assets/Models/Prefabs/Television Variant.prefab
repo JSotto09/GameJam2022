@@ -53,7 +53,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46455c814e787344ca2d67d1f9db027c, type: 3}
       propertyPath: m_Name
-      value: Television
+      value: Television Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46455c814e787344ca2d67d1f9db027c, type: 3}
+--- !u!1 &6769724908661317479 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 46455c814e787344ca2d67d1f9db027c, type: 3}
+  m_PrefabInstance: {fileID: 5851175639181304374}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &-3441313289561560091
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6769724908661317479}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
