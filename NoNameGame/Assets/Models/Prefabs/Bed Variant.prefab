@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3737206899359733013
+--- !u!1001 &7233170170470367832
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -13,27 +13,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b672a9356ff202141928416b1a1ffefe, type: 3}
       propertyPath: m_LocalScale.x
-      value: 175.29295
+      value: 190.0419
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b672a9356ff202141928416b1a1ffefe, type: 3}
       propertyPath: m_LocalScale.y
-      value: 175.29295
+      value: 190.0419
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b672a9356ff202141928416b1a1ffefe, type: 3}
       propertyPath: m_LocalScale.z
-      value: 175.29295
+      value: 190.0419
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b672a9356ff202141928416b1a1ffefe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.655
+      value: 2.906
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b672a9356ff202141928416b1a1ffefe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.071
+      value: 1.179
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b672a9356ff202141928416b1a1ffefe, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.78
+      value: -10.45
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b672a9356ff202141928416b1a1ffefe, type: 3}
       propertyPath: m_LocalRotation.w
@@ -65,26 +65,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b672a9356ff202141928416b1a1ffefe, type: 3}
       propertyPath: m_Name
-      value: Bed Variant
+      value: Bed
       objectReference: {fileID: 0}
+    - target: {fileID: 1170970068873931921, guid: b672a9356ff202141928416b1a1ffefe, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 78c78ead33bf26544baab6346c723691, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b672a9356ff202141928416b1a1ffefe, type: 3}
---- !u!1 &4547597745811417156 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b672a9356ff202141928416b1a1ffefe, type: 3}
-  m_PrefabInstance: {fileID: 3737206899359733013}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &-7409278383757263907
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4547597745811417156}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3369316746193770658, guid: b672a9356ff202141928416b1a1ffefe, type: 3}
