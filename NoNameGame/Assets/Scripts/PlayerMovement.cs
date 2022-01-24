@@ -18,21 +18,19 @@ public class PlayerMovement : MonoBehaviour
     public float gravity = -9.81f;
 
     public float jumpHeight = 3f;
-    Vector3 velocity;
+    private Vector3 velocity;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
-    bool isGrounded;
+    private bool isGrounded;
 
     public bool isRunning;
-    bool isWalking;
-
-    //CharacterController charactercollider;//
+    private bool isWalking;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -40,8 +38,13 @@ public class PlayerMovement : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void Idle()
+    {
+        velocity = Vector3.zero;
+    }
+
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
@@ -53,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        
+
         Vector3 move = transform.right * x + transform.forward * z;
 
         if (isRunning == false && move != Vector3.zero)
@@ -77,8 +80,10 @@ public class PlayerMovement : MonoBehaviour
             //}
         }
 
-        if (Input.GetKey(KeyCode.LeftShift) == false && move != Vector3.zero)
+        if (Input.GetKey(KeyCode.LeftShift) == true && move != Vector3.zero)
         {
+            isRunning = true;
+            controller.Move(move * runSpeed * Time.deltaTime);
 
             //if (audioSource.isPlaying == false || audioSource.clip != running)
             //{
@@ -96,10 +101,10 @@ public class PlayerMovement : MonoBehaviour
             //}
         }
 
-        //if (Input.GetButtonDown("Jump") && isGrounded)
-        //{
-        //    velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-        //}   
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
 
         velocity.y += gravity * Time.deltaTime;
 

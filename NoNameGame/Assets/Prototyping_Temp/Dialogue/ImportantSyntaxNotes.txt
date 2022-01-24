@@ -1,0 +1,14 @@
+[NAME=]   	>>>Whatever is between the = and ] will be taken as the name for the character, and it can change multiple times.
+			>>>[NAME=???] sets it to ???
+			>>>Then you can do [NAME=Milo] to set it to Milo later in the text file.
+
+**Choices** >>>This is just a way to split choices from your dialogue text; this line will be ignored by the reader
+
+[CHOICE=1]_	>>>This is to designate the choices. The text after the _ will be put in the respective button; [CHOICE=1] will go to button 1.
+[CHOICE=2]_
+etc.
+
+{1}_		>>>This is to designate the response of the character to the choice. The text after the _ will be displayed.
+{2}_		>>>Choices other than the one picked will be ignored.
+
+EndQueue	>>>This is to stop the dialogue system and close it out, allowing the player to move around again.
