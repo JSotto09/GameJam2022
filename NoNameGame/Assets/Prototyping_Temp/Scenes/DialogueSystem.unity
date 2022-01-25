@@ -230,6 +230,7 @@ GameObject:
   - component: {fileID: 231471618}
   - component: {fileID: 231471617}
   - component: {fileID: 231471616}
+  - component: {fileID: 231471619}
   m_Layer: 5
   m_Name: Choice4
   m_TagString: Untagged
@@ -301,10 +302,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1475959193}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: MadeChoice
-        m_Mode: 3
+      - m_Target: {fileID: 231471619}
+        m_TargetAssemblyTypeName: ButtonChoice, Assembly-CSharp
+        m_MethodName: PressedChoice
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -351,6 +352,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 231471614}
   m_CullTransparentMesh: 1
+--- !u!114 &231471619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231471614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61344c0d0b066b847a4db505b4516626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisChoice: 4
 --- !u!1 &385693879
 GameObject:
   m_ObjectHideFlags: 0
@@ -1304,6 +1318,7 @@ GameObject:
   - component: {fileID: 1316203137}
   - component: {fileID: 1316203136}
   - component: {fileID: 1316203135}
+  - component: {fileID: 1316203138}
   m_Layer: 5
   m_Name: Choice1
   m_TagString: Untagged
@@ -1375,10 +1390,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1475959193}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: MadeChoice
-        m_Mode: 3
+      - m_Target: {fileID: 1316203138}
+        m_TargetAssemblyTypeName: ButtonChoice, Assembly-CSharp
+        m_MethodName: PressedChoice
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1425,6 +1440,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316203133}
   m_CullTransparentMesh: 1
+--- !u!114 &1316203138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316203133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61344c0d0b066b847a4db505b4516626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisChoice: 1
 --- !u!1 &1367792606
 GameObject:
   m_ObjectHideFlags: 0
@@ -1516,6 +1544,7 @@ GameObject:
   - component: {fileID: 1445991132}
   - component: {fileID: 1445991131}
   - component: {fileID: 1445991130}
+  - component: {fileID: 1445991133}
   m_Layer: 5
   m_Name: Choice2
   m_TagString: Untagged
@@ -1587,10 +1616,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1475959193}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: MadeChoice
-        m_Mode: 3
+      - m_Target: {fileID: 1445991133}
+        m_TargetAssemblyTypeName: ButtonChoice, Assembly-CSharp
+        m_MethodName: PressedChoice
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1637,6 +1666,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1445991128}
   m_CullTransparentMesh: 1
+--- !u!114 &1445991133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445991128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61344c0d0b066b847a4db505b4516626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisChoice: 2
 --- !u!1 &1471019944
 GameObject:
   m_ObjectHideFlags: 0
@@ -2373,6 +2415,7 @@ GameObject:
   - component: {fileID: 2135961921}
   - component: {fileID: 2135961920}
   - component: {fileID: 2135961919}
+  - component: {fileID: 2135961922}
   m_Layer: 5
   m_Name: Choice3
   m_TagString: Untagged
@@ -2444,10 +2487,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1475959193}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: MadeChoice
-        m_Mode: 3
+      - m_Target: {fileID: 2135961922}
+        m_TargetAssemblyTypeName: ButtonChoice, Assembly-CSharp
+        m_MethodName: PressedChoice
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2494,3 +2537,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2135961917}
   m_CullTransparentMesh: 1
+--- !u!114 &2135961922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135961917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61344c0d0b066b847a4db505b4516626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisChoice: 3

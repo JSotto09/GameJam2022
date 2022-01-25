@@ -20,6 +20,7 @@ public class DialogueManager : MonoBehaviour
     public bool freezePlayerOnDialogue = true;
 
     private string choiceMade;
+    private string choiceNumber;
 
     private bool isChoosing = false;
 
@@ -146,7 +147,7 @@ public class DialogueManager : MonoBehaviour
                 //Debug.Log(inputStream.Peek() + " Checking...");
                 if (CheckChoice())
                 {
-                    Debug.Log(inputStream.Peek() + "Checking for [*");
+                    //Debug.Log(inputStream.Peek() + "Checking for [*");
                     if (inputStream.Peek().Contains("[*"))
                     {
                         x--;
@@ -157,6 +158,7 @@ public class DialogueManager : MonoBehaviour
                         //Debug.Log(inputStream.Peek() + " 1st peek");
                         ChoiceButtons[x].SetActive(true);
                         //Debug.Log(inputStream.Peek() + " 2nd peek");
+                        ChoiceButtons[x].GetComponent<ButtonChoice>().ChangeChoice(choiceNumber);
                         ChoiceTexts[x].text = inputStream.Dequeue();
                         //Debug.Log(inputStream.Peek() + " Checking again...");
                     }
@@ -165,7 +167,10 @@ public class DialogueManager : MonoBehaviour
                 {
                     Debug.Log("Doesn't check out.");
                     x--;
-                    Debug.Log(inputStream.Dequeue());
+                    if (!inputStream.Peek().Contains("[*"))
+                    {
+                        Debug.Log(inputStream.Dequeue());
+                    }
                 }
             }
         }
@@ -175,13 +180,15 @@ public class DialogueManager : MonoBehaviour
     {
         if (inputStream.Peek().Contains("[CHOICE="))
         {
-            Debug.Log("Removing");
-            inputStream.Dequeue();
+
+            //Debug.Log("Removing");
+            choiceNumber = inputStream.Dequeue().Substring(8, 1);
+            //Debug.Log(choiceNumber);
         }
 
         if (inputStream.Peek().Contains("[*"))
         {
-            Debug.Log("Check Phase 1");
+            //Debug.Log("Check Phase 1");
             //Debug.Log(inputStream.Peek().Substring(3, 1) + "Check Phase 2");
             //Debug.Log(inputStream.Peek().Substring(2, 1) + "Check Phase 3");
             if (inputStream.Peek().Contains("[*!"))

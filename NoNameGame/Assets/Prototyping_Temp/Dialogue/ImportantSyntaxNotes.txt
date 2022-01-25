@@ -11,8 +11,8 @@ etc.
 [1]			>>>This is to designate the response of the character to the choice. The text after will be displayed.
 [2]			>>>Choices other than the one picked will be ignored.
 
-[*1]		>>>Designates an object requirement
-[!*1]		>>>Similar to the above but instead of requiring it it will only show if you don't have that object
+[*1]		>>>Designates an object requirement; can be any number
+[*!1]		>>>Similar to the above but instead of requiring it it will only show if you don't have that object
 			>>>Something to take note of from the ExampleNPCDialogue.txt is that...
 			>>>You can only have 2 things per line (for some reason)
 			>>>Ask me if you need further explanation
