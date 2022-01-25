@@ -30,6 +30,8 @@ public class DialogueManager : MonoBehaviour
     private PlayerMovement playerMove;
     private MouseLook mouseControl;
 
+    private List<string> requiredObjects = new List<string>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +41,6 @@ public class DialogueManager : MonoBehaviour
         {
             ChoiceButtons[x].SetActive(false);
         }
-
     }
 
     private void DisablePlayerMovement()
@@ -112,16 +113,16 @@ public class DialogueManager : MonoBehaviour
         {
             PrintChoices();
         }
-        else if (inputStream.Peek().Contains("{"))
+        else if (inputStream.Peek().Contains("["))
         {
-            if (inputStream.Peek().Contains("{" + choiceMade))
+            if (inputStream.Peek().Contains("[" + choiceMade))
             {
-                string[] dialogueText = inputStream.Dequeue().Split(char.Parse("_"));
-                BodyText.text = dialogueText[1];
-                System.Array.Clear(dialogueText, 0, dialogueText.Length);
+                inputStream.Dequeue();
+                BodyText.text = inputStream.Dequeue();
             }
             else
             {
+                inputStream.Dequeue();
                 inputStream.Dequeue();
                 PrintDialogue();
             }
@@ -139,17 +140,77 @@ public class DialogueManager : MonoBehaviour
         isChoosing = true;
         for (int x = 0; x < 4; x++)
         {
-            if (inputStream.Peek().Contains("[CHOICE="))
+            if (inputStream.Peek().Contains("[CHOICE=") || inputStream.Peek().Contains("[*"))
             {
-                ChoiceButtons[x].SetActive(true);
-                inputStream.Dequeue();
-                string tempString = inputStream.Dequeue();
-                Debug.Log(tempString);
-                string[] dialogueText = tempString.Split(char.Parse("_"));
-                Debug.Log(dialogueText[1]);
-                ChoiceTexts[x].text = dialogueText[1];
-                System.Array.Clear(dialogueText, 0, dialogueText.Length);
+                //Debug.Log("Pass " + x.ToString());
+                //Debug.Log(inputStream.Peek() + " Checking...");
+                if (CheckChoice())
+                {
+                    Debug.Log(inputStream.Peek() + "Checking for [*");
+                    if (inputStream.Peek().Contains("[*"))
+                    {
+                        x--;
+                    }
+                    else
+                    {
+                        //Debug.Log("Checks Out.");
+                        //Debug.Log(inputStream.Peek() + " 1st peek");
+                        ChoiceButtons[x].SetActive(true);
+                        //Debug.Log(inputStream.Peek() + " 2nd peek");
+                        ChoiceTexts[x].text = inputStream.Dequeue();
+                        //Debug.Log(inputStream.Peek() + " Checking again...");
+                    }
+                }
+                else
+                {
+                    Debug.Log("Doesn't check out.");
+                    x--;
+                    Debug.Log(inputStream.Dequeue());
+                }
             }
+        }
+    }
+
+    private bool CheckChoice()
+    {
+        if (inputStream.Peek().Contains("[CHOICE="))
+        {
+            Debug.Log("Removing");
+            inputStream.Dequeue();
+        }
+
+        if (inputStream.Peek().Contains("[*"))
+        {
+            Debug.Log("Check Phase 1");
+            //Debug.Log(inputStream.Peek().Substring(3, 1) + "Check Phase 2");
+            //Debug.Log(inputStream.Peek().Substring(2, 1) + "Check Phase 3");
+            if (inputStream.Peek().Contains("[*!"))
+            {
+                if (requiredObjects.Contains(inputStream.Dequeue().Substring(3, 1)))
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                if (requiredObjects.Contains(inputStream.Dequeue().Substring(2, 1)))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+        else
+        {
+            Debug.Log("No requirements");
+            return true;
         }
     }
 
@@ -160,6 +221,11 @@ public class DialogueManager : MonoBehaviour
         PrintDialogue();
         EnableCameraControl();
         isChoosing = false;
+    }
+
+    public void AddRequiredObjects(int tempObject)
+    {
+        requiredObjects.Add(tempObject.ToString());
     }
 
     public void EndDialogue()

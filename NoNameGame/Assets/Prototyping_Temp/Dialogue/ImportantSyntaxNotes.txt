@@ -4,11 +4,17 @@
 
 **Choices** >>>This is just a way to split choices from your dialogue text; this line will be ignored by the reader
 
-[CHOICE=1]_	>>>This is to designate the choices. The text after the _ will be put in the respective button; [CHOICE=1] will go to button 1.
-[CHOICE=2]_
+[CHOICE=1]	>>>This is to designate the choices. The text after will be put in the respective button; [CHOICE=1] will go to button 1.
+[CHOICE=2]
 etc.
 
-{1}_		>>>This is to designate the response of the character to the choice. The text after the _ will be displayed.
-{2}_		>>>Choices other than the one picked will be ignored.
+[1]			>>>This is to designate the response of the character to the choice. The text after will be displayed.
+[2]			>>>Choices other than the one picked will be ignored.
+
+[*1]		>>>Designates an object requirement
+[!*1]		>>>Similar to the above but instead of requiring it it will only show if you don't have that object
+			>>>Something to take note of from the ExampleNPCDialogue.txt is that...
+			>>>You can only have 2 things per line (for some reason)
+			>>>Ask me if you need further explanation
 
 EndQueue	>>>This is to stop the dialogue system and close it out, allowing the player to move around again.

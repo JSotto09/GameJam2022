@@ -14,11 +14,17 @@ What will your choice be?
 
 **Choices** (Working on this...)
 
-[CHOICE=1]_Kill them
-[CHOICE=2]_Keep them alive
+[CHOICE=1][*!1]
+[*2]Kill them
+[CHOICE=2][*!1]
+Keep them alive
+[CHOICE=3][*1]
+Kill yourself
 
-{1}_Hope you enjoy your new self. I'll see you again sometime...
+[1]Hope you enjoy your new self. I'll see you again sometime...
 
-{2}_Then let the cycle continue.
+[2]Then let the cycle continue.
+
+[3]Weirdo.
 
 EndQueue
